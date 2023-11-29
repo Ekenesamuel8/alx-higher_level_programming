@@ -2,17 +2,21 @@
 """defines class Rectangle"""
 
 class Rectangle:
-    """Instantiation with optional
+    def __init__(self, width=0, height=0):
+        """Instantiation with optional
         arg:
         width and height
-    """
-    def __init__(self, width=0, height=0):
+        """
         self.__width = width
         self.__height = height
     def area(self):
+        """the area of rectangle
+	"""
         return self.width * self.height
 
     def perimeter(self):
+        """perimeter of thr rectangle
+	"""
         if (self.width or self.height) == 0:
             return 0
         else:
