@@ -1,22 +1,27 @@
 #!/usr/bin/python3
 """defines class Rectangle"""
 
+
 class Rectangle:
     def __init__(self, width=0, height=0):
         """Instantiation with optional
         arg:
         width and height
         """
+
         self.__width = width
         self.__height = height
+
     def area(self):
         """the area of rectangle
-	"""
+        """
+
         return self.width * self.height
 
     def perimeter(self):
         """perimeter of thr rectangle
-	"""
+        """
+
         if (self.width or self.height) == 0:
             return 0
         else:
@@ -26,6 +31,7 @@ class Rectangle:
     def width(self):
         """property def width(self): to retrieve it
         """
+
         return self.__width
 
     @width.setter
@@ -34,7 +40,7 @@ class Rectangle:
             width must be an integer
             otherwise raise a TypeError exception
             if width is less than 0,
-	    raise a ValueError exception
+            raise a ValueError exception
         """
 
         if not isinstance(value, int):
@@ -48,6 +54,7 @@ class Rectangle:
     def height(self):
         """property def width(self): to retrieve it
         """
+
         return self.__height
 
     @height.setter
@@ -56,7 +63,7 @@ class Rectangle:
             width must be an integer
             otherwise raise a TypeError exception
             if width is less than 0,
-	    raise a ValueError exception
+            raise a ValueError exception
         """
 
         if not isinstance(value, int):
