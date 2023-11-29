@@ -3,6 +3,9 @@
 
 
 class Rectangle:
+    """Rectangle that defines a rectangle by: (based on 1-rectangle.py)
+    """
+
     def __init__(self, width=0, height=0):
         """Instantiation with optional
         arg:

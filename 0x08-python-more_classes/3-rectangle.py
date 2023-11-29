@@ -81,20 +81,25 @@ class Rectangle:
         else:
             return 2 * (self.width + self.height)
 
-    def __str__(self):
+    def _draw_rectangle(self):
         """obtains a strings representation of a object
         """
 
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        else:
-            rectangle_str = ""
-        for _ in range(self.__height):
-            rectangle_str += "#" * self.__width + "\n"
-        return rectangle_str[:-1]
+        str = ""
+        for row in range(self.__height):
+            for col in range(self.__width):
+                str += '#'
+            if self.__width != 0 and row < (self.__height - 1):
+                str += '\n'
+        return str
 
-    def __repr__(self):
-        """if not define do this
+    def __str__(self):
+        """Allows direct printing of instances.
+
+           Returns:
+           The output of _draw_rectangle, which creates a string
+           representation of the rectangle suitable for printing.
+
         """
 
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        return self._draw_rectangle()
