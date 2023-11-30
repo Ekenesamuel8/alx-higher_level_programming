@@ -8,6 +8,7 @@ class Rectangle:
          Attributes:
          size: size of a square (1 side).
     """
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Instantiation with optional
@@ -103,3 +104,21 @@ class Rectangle:
         """
 
         return self._draw_rectangle()
+
+    def __repr__(self):
+        """Allows use of eval().
+
+            Returns:
+            A string of the code needed to create the instance.
+
+        """
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    @classmethod
+    def __del__(cls):
+        """Decrements `number_of_instances`, then prints message upon
+           deletion of instance.
+
+        """
+        cls.number_of_instances -= 1
+        print('Bye rectangle...')

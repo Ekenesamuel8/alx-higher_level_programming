@@ -103,3 +103,19 @@ class Rectangle:
         """
 
         return self._draw_rectangle()
+
+    def __repr__(self):
+        """Allows use of eval().
+
+            Returns:
+            A string of the code needed to create the instance.
+
+        """
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    @staticmethod
+    def __del__():
+        """Prints message upon deletion of instance.
+
+        """
+        print('Bye rectangle...')
