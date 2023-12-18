@@ -62,22 +62,23 @@ class Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
-class SinglyLinkedList:
-   """
-   Class that defines properties of SinglyLinkedList.
 
-   Attributes:
-            head: head of the SinglyLinkedList.
-   """
-   def __init__(self):
+class SinglyLinkedList:
+    """
+    Class that defines properties of SinglyLinkedList.
+
+    Attributes:
+        head: head of the SinglyLinkedList.
+    """
+    def __init__(self):
         """Creates new instances of SinglyLinkedList .
 
         Args:
-	    __head : head of the SinglyLinkedList .
+            __head : head of the SinglyLinkedList .
         """
         self.__head = None
 
-   def __str__(self):
+    def __str__(self):
         """Represents the class objects as a string.
 
         Returns: The class object represented as a string.

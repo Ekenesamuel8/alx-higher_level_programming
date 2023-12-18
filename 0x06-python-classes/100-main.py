@@ -14,4 +14,3 @@ sll.sorted_insert(5)
 sll.sorted_insert(12)
 sll.sorted_insert(3)
 print(sll)
-

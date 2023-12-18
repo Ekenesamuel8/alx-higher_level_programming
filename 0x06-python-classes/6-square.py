@@ -22,7 +22,7 @@ class Square:
     def area(self):
         """Calculates the area of square.
 
-	Returns: the current square area.
+        Returns: the current square area.
         """
         return self.__size ** 2
 
@@ -37,7 +37,7 @@ class Square:
         """Property setter for size.
 
         Args:
-	value (int): size of a square (1 side).
+        value (int): size of a square (1 side).
             Raises:
             TypeError: size must be an integer.
             ValueError: size must be >= 0.
