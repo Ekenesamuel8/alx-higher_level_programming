@@ -1,0 +1,46 @@
+adding two integers
+-------------------
+
+first import ''add_integer'' from the ''0-add_integer.py'' module:
+
+    >>> add_integer = __import__ ('0-add_integer').add_integer
+
+check for module documentation:
+    >>> e = __import__('0-add_integer').__doc__
+    >>> len(e) > 1
+    True
+
+check for function documentation:
+    >>> w = __import__('0-add_integer').add_integer.__doc__
+    >>> len(w) > 1
+    True
+
+check for addition:
+    >>> add_integer(2, 4)
+    6
+
+check for negetive:
+    >>> add_integer(-2, 4)
+    2
+
+check for second number is negetive:
+    >>> add_integer(2, -4)
+    -2
+
+check if float:
+    >>> add_integer(1.5, 6)
+    7
+
+check second number is float:
+    >>> add_integer(6, 0.33)
+    6
+
+check if nothing given:
+    >>> add_integer(0)
+    98
+
+check for string:
+     >>> add_integer("obii")
+     Traceback (most recent call last):
+     ...
+     TypeError: a must be an integer

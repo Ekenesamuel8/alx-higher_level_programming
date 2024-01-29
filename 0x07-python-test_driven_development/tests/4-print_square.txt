@@ -1,0 +1,32 @@
+print square
+============
+
+import the function or moudle:
+    >>> print_square = __import__ ('4-print_square').print_square
+
+check for documentation in module:
+    >>> m = __import__('4-print_square').__doc__
+    >>> len(m) > 1
+    True
+
+check for function docscript:
+    >>> q = __import__('4-print_square').print_square.__doc__
+    >>> len(q) > 1
+    True
+
+basic check:
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+check for 0:
+    >>> print_square(0)
+
+
+negetive number:
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0

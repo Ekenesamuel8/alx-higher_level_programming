@@ -1,0 +1,42 @@
+the say my name test
+--------------------
+
+Importing the module:
+    >>> say_my_name = __import__ ('3-say_my_name').say_my_name
+
+check for module docstring:
+    >>> m = __import__('3-say_my_name').__doc__
+    >>> len(m) > 1
+    True
+
+check for function docstring:
+    >>> h = __import__('3-say_my_name').say_my_name.__doc__
+    >>> len(h) > 1
+    True
+
+check for basic:
+    >>> say_my_name("ada", "obi")
+    My name is ada obi
+
+check when one argument is pass:
+    >>> say_my_name("ada")
+    My name is ada 
+
+check for integer:
+    >>> say_my_name(4, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name("ada", 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+check if one is not string:
+    >>> say_my_name(2, "obi")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+
