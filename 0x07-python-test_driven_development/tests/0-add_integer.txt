@@ -44,3 +44,24 @@ check for string:
      Traceback (most recent call last):
      ...
      TypeError: a must be an integer
+
+     >>> add_integer(float('-inf'), float('inf'))
+     Traceback (most recent call last):
+     OverflowError: cannot convert float infinity to integer
+
+     >>> add_integer(100e1000, 1)
+     Traceback (most recent call last):
+     OverflowError: cannot convert float infinity to integer
+
+     >>> add_integer(float('inf'))
+     Traceback (most recent call last):
+     OverflowError: cannot convert float infinity to integer
+
+
+     >>> add_integer(float('nan'), 0)
+     Traceback (most recent call last):
+     ValueError: cannot convert float NaN to integer
+
+     >>> add_integer(None)
+     Traceback (most recent call last):
+     TypeError: a must be an integer

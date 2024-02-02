@@ -29,7 +29,7 @@ def matrix_divided(matrix, div):
     # matix has to exist, can't be less or equal to 0
     if len(matrix[0]) <= 0:
         raise TypeError('matrix must be a matrix (list of lists) '
-	                'of integers/floats')
+                        'of integers/floats')
     # 1.let's create new matrix with newrow
     for row in matrix:
         newrow = []

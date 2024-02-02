@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """module"""
 
+
 def add_integer(a, b=98):
     """
     Adds two integer
@@ -22,6 +23,6 @@ def add_integer(a, b=98):
     else:
         return (int(a) + int(b))
 
- #   if __name__=="__main__":
-  #      import doctest
-   #     doctest.testfile("tests/0-add_integer.txt")
+    #   if __name__=="__main__":
+    #      import doctest
+    #     doctest.testfile("tests/0-add_integer.txt")
