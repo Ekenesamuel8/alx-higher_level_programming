@@ -28,5 +28,18 @@ class Base:
         """that writes the JSON string representation of
            list_objs to a file:
         """
-        if list_objs is None:
-            with open("Rectangle.json")
+        with open(cls.__name__ + ".json", mode="w") as write_file:
+            if list_objs is None:
+                write_file.write("[]")
+            else:
+                # Using to_json_string(), and to_dictionary() to format
+                write_file.write(cls.to_json_string(
+                                 [item.to_dictionary() for item in list_objs]))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string"""
+        if json_string is None or len(json_string) == 0:
+            return "[]"
+        else:
+            return json.loads(json_string)
