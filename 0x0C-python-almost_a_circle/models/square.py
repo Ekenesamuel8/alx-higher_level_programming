@@ -31,6 +31,8 @@ class Square(Rectangle):
                 f"- {self.size}")
 
     def update(self, *args, **kwargs):
+        """assign argument passing to ayyribute"""
+
         if len(args) != 0:
             try:
                 self.id = args[0]
