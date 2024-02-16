@@ -77,7 +77,7 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
-            raise ValueError("x must be > 0")
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -97,7 +97,7 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
-            raise ValueError("y must be > 0")
+            raise ValueError("y must be >= 0")
         self.__y = value
 
     def area(self):
@@ -112,19 +112,26 @@ class Rectangle(Base):
 
     def __str__(self):
         """displays a message in a string format"""
-        return (f"[Rectangle] ({self.id}) {self.x}/{self.y}"
-                "- {self.width}/{self.height}")
+        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
+                f"{self.__width}/{self.__height}")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigning arguments to eash of the variables"""
-        if args:
-            if len(args) >= 1:
+        if len(kwargs) != 0:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
+        elif len(args) != 0:
+            try:
                 self.id = args[0]
-            if len(args) >= 2:
-                self.width = args[1]
-            if len(args) >= 3:
-                self.height = args[2]
-            if len(args) >= 4:
-                self.x = args[3]
-            if len(args) >= 5:
-                self.y = args[4]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+            except IndexError:
+                pass
+        else:
+            print()
+
+    def to_dictionary(self):
+        """display in dictionary mode"""
+        return {'id': self.id, 'x': self.x, 'width': self.width, 'height': self.height, 'y': self.y}
