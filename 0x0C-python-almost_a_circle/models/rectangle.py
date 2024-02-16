@@ -133,6 +133,7 @@ class Rectangle(Base):
             print()
 
     def to_dictionary(self):
-        """display in dictionary mode"""
+        """display in dictionary mode
+        """
         return ({'id': self.id, 'x': self.x, 'width': self.width,
                 'height': self.height, 'y': self.y})

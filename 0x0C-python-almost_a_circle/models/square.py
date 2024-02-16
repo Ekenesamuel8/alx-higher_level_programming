@@ -5,21 +5,28 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """inherite from rectangle"""
+
     def __init__(self, size, x=0, y=0, id=None):
+        """class constructors"""
         super().__init__(id=id, x=x, y=y, width=size, height=size)
 
     @property
     def size(self):
+        """access the size attribute"""
+
         return self.width
 
     @size.setter
     def size(self, value):
         """update the size attribute"""
+
         self.width = value
         self.height = value
 
     def __str__(self):
         """display inthis format"""
+
         return (f"[{self.__class__.__name__}] ({self.id}) {self.x}/{self.y}"
                 f"- {self.size}")
 
@@ -41,4 +48,5 @@ class Square(Rectangle):
     def to_dictionary(self):
         """Returns a dict representation
         """
+
         return {'id': self.id, 'x': self.x, 'size': self.width, 'y': self.y}
