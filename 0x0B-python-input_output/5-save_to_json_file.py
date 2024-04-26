@@ -1,16 +1,21 @@
-"""pythjon input and output task 5"""
+#!/usr/bin/python3
+""" Module that writes an Object to a text file using
+a JSON representation
+"""
 import json
 
 
 def save_to_json_file(my_obj, filename):
-    """write an object to a text file, using
-       a JSON representation
-    args:
-        my_obj: the object to be written in the textfile
-         filename: the text file
-    """
+    """ Function that writes an object to a text file
+    by a JSON representation
 
-    with open(filename, 'w') as file:
-        file.write(json.dumps(my_obj))
-					    ~
-    /bin/bash: /urs/bin/python3: No such file or directory
+    Args:
+        my_obj: object
+        filename: textfile name
+
+    Raises:
+        Exception: when the object can't be encoded
+
+    """
+    with open(filename, 'w', encoding="utf-8") as f:
+        json.dump(my_obj, f)
