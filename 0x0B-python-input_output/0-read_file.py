@@ -1,13 +1,18 @@
 #!/usr/bin/python3
-"""python iput and output task 0"""
+""" Module that contains a function that reads from a file """
 
 
 def read_file(filename=""):
-    """THIS reads a file text and prints it to stdout
-       arg:
-       filename: file to bew open
+    """ Function that reads from a file
+
+    Args:
+        filename: filename
+
+    Raises
+        Exception: when the file can be opened
+
     """
 
-    with open(filename, 'r', encoding="UTF-8") as file:
-        plsread = file.read()
-        print(plsread)
+    with open(filename, 'r', encoding="utf-8") as f:
+        read_data = f.read()
+        print(read_data, end='')
